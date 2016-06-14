@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMapViewController" customModule="Desclub" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="LWR-3E-eot" id="PR7-qR-Tnl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LWR-3E-eot">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPl-qx-yyR">
+                    <rect key="frame" x="8" y="8" width="33" height="33"/>
+                    <state key="normal" image="cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeMap:" destination="-1" eventType="touchUpInside" id="pgh-tC-ma9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fPl-qx-yyR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ABY-Es-TJq"/>
+                <constraint firstAttribute="trailing" secondItem="LWR-3E-eot" secondAttribute="trailing" id="B7f-nr-g9o"/>
+                <constraint firstItem="LWR-3E-eot" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HxI-F1-IEq"/>
+                <constraint firstAttribute="bottom" secondItem="LWR-3E-eot" secondAttribute="bottom" id="b2f-qZ-9fi"/>
+                <constraint firstItem="LWR-3E-eot" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fs5-fk-yAw"/>
+                <constraint firstItem="fPl-qx-yyR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="pbA-5h-uIf"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="33" height="33"/>
+    </resources>
+</document>

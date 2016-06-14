@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MembershipOptionsViewController" customModule="Desclub" customModuleProvider="target">
+            <connections>
+                <outlet property="accessButton" destination="6kE-bt-YyJ" id="EJi-KY-Ebp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="173"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-8U-emi">
+                    <rect key="frame" x="8" y="8" width="33" height="33"/>
+                    <state key="normal" image="cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeModal:" destination="-1" eventType="touchUpInside" id="K8y-7Q-o2h"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukf-zW-gFW">
+                    <rect key="frame" x="25" y="102" width="290" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-bt-YyJ">
+                            <rect key="frame" x="130" y="0.0" width="160" height="50"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="160" id="QGo-xt-Atu"/>
+                                <constraint firstAttribute="height" constant="50" id="u64-lm-cZ8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Acceder como miembro">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="access:" destination="-1" eventType="touchUpInside" id="nug-EQ-jj8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1K-zx-yeh">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="rIe-IR-NRK"/>
+                                <constraint firstAttribute="height" constant="50" id="xZo-ms-Cf2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Explorar">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="explore:" destination="-1" eventType="touchUpInside" id="VNu-1z-TtH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="j1K-zx-yeh" secondAttribute="centerY" id="3Ss-HW-QkT"/>
+                        <constraint firstAttribute="centerY" secondItem="6kE-bt-YyJ" secondAttribute="centerY" id="F8H-bX-Q2V"/>
+                        <constraint firstAttribute="height" constant="50" id="R1V-qw-tkX"/>
+                        <constraint firstAttribute="trailing" secondItem="6kE-bt-YyJ" secondAttribute="trailing" id="fGr-Ir-30w"/>
+                        <constraint firstAttribute="width" constant="290" id="ixA-rR-ZlF"/>
+                        <constraint firstItem="j1K-zx-yeh" firstAttribute="leading" secondItem="Ukf-zW-gFW" secondAttribute="leading" id="sWr-Yf-5e1"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo quieres empezar?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVd-KD-94k">
+                    <rect key="frame" x="55" y="48" width="230" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" red="0.19215686269999999" green="0.59607843140000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fVd-KD-94k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="7zE-Hx-ahH"/>
+                <constraint firstItem="8TB-8U-emi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FBD-lz-1qu"/>
+                <constraint firstAttribute="centerX" secondItem="fVd-KD-94k" secondAttribute="centerX" id="O0a-UX-fgd"/>
+                <constraint firstItem="8TB-8U-emi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="g3j-1E-LK7"/>
+                <constraint firstItem="Ukf-zW-gFW" firstAttribute="top" secondItem="fVd-KD-94k" secondAttribute="bottom" constant="31" id="gaT-Ns-9ch"/>
+                <constraint firstAttribute="centerX" secondItem="Ukf-zW-gFW" secondAttribute="centerX" id="t0E-nt-4kg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="751" y="581.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="33" height="33"/>
+    </resources>
+</document>

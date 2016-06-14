@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SaludViewController" customModule="Desclub" customModuleProvider="target">
+            <connections>
+                <outlet property="cardNumber" destination="bah-ek-kf0" id="r3d-jj-ltI"/>
+                <outlet property="clockLabel" destination="Xnd-BW-JNt" id="N56-Ia-frG"/>
+                <outlet property="name" destination="8Rm-R1-uQt" id="ALB-Vn-1rP"/>
+                <outlet property="validThru" destination="ZAf-6c-mYN" id="ZAP-b4-zLO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centro de atención médica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q52-ZE-HFh">
+                    <rect key="frame" x="146" y="5" width="309" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTM-B5-8hi" userLabel="Soporte 24">
+                    <rect key="frame" x="0.0" y="49" width="600" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soporte 24 Hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htZ-PA-YT9">
+                            <rect key="frame" x="214" y="3" width="173" height="29"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.086274509803921567" green="0.34509803921568627" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="htZ-PA-YT9" firstAttribute="centerY" secondItem="fTM-B5-8hi" secondAttribute="centerY" id="8i6-gU-uz5"/>
+                        <constraint firstItem="htZ-PA-YT9" firstAttribute="centerX" secondItem="fTM-B5-8hi" secondAttribute="centerX" id="a3r-4F-mJS"/>
+                        <constraint firstAttribute="height" constant="35" id="vef-Ej-sBn"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telefonos_tarjeta_medica" translatesAutoresizingMaskIntoConstraints="NO" id="C38-iF-dFC">
+                    <rect key="frame" x="138" y="92" width="324" height="127"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="324" id="Nbr-AF-g0T"/>
+                        <constraint firstAttribute="height" constant="127" id="m8C-Om-OVw"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NC-pc-g6M" userLabel="Card">
+                    <rect key="frame" x="130" y="227" width="341" height="220"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_tarjeta_medica_salud" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-Ol-raq">
+                            <rect key="frame" x="0.0" y="0.0" width="341" height="220"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="341" id="D9c-Tl-sBI"/>
+                                <constraint firstAttribute="height" constant="220" id="gEb-eu-mgk"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-WS-RIy" userLabel="CardContent">
+                            <rect key="frame" x="0.0" y="0.0" width="341" height="220"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BeepQuest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rm-R1-uQt">
+                                    <rect key="frame" x="20" y="166" width="281" height="17"/>
+                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnd-BW-JNt" userLabel="clock">
+                                    <rect key="frame" x="71" y="20" width="250" height="14"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="CBq-eT-ghC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bah-ek-kf0" userLabel="cardnumber">
+                                    <rect key="frame" x="81" y="113" width="180" height="39"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="180" id="wzP-cs-mgE"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="33"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VENCE 11/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAf-6c-mYN">
+                                    <rect key="frame" x="20" y="186" width="281" height="14"/>
+                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="bah-ek-kf0" firstAttribute="top" secondItem="hKr-WS-RIy" secondAttribute="top" constant="113" id="AG1-8x-RKv"/>
+                                <constraint firstAttribute="trailing" secondItem="Xnd-BW-JNt" secondAttribute="trailing" constant="20" id="DMH-ML-t4s"/>
+                                <constraint firstItem="bah-ek-kf0" firstAttribute="centerX" secondItem="hKr-WS-RIy" secondAttribute="centerX" id="IdN-fQ-vUt"/>
+                                <constraint firstItem="ZAf-6c-mYN" firstAttribute="top" secondItem="8Rm-R1-uQt" secondAttribute="bottom" constant="3" id="UOB-BX-MDf"/>
+                                <constraint firstItem="8Rm-R1-uQt" firstAttribute="leading" secondItem="hKr-WS-RIy" secondAttribute="leading" constant="20" id="Z6E-tc-V3C"/>
+                                <constraint firstAttribute="trailing" secondItem="8Rm-R1-uQt" secondAttribute="trailing" constant="40" id="ZFw-lb-fjs"/>
+                                <constraint firstItem="ZAf-6c-mYN" firstAttribute="leading" secondItem="hKr-WS-RIy" secondAttribute="leading" constant="20" id="gWB-sR-1mP"/>
+                                <constraint firstAttribute="trailing" secondItem="ZAf-6c-mYN" secondAttribute="trailing" constant="40" id="m0O-Ep-0Zy"/>
+                                <constraint firstItem="8Rm-R1-uQt" firstAttribute="top" secondItem="bah-ek-kf0" secondAttribute="bottom" constant="15" id="rfk-pe-rBC"/>
+                                <constraint firstItem="Xnd-BW-JNt" firstAttribute="top" secondItem="hKr-WS-RIy" secondAttribute="top" constant="20" id="s3K-Xu-e2S"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hKr-WS-RIy" firstAttribute="leading" secondItem="8NC-pc-g6M" secondAttribute="leading" id="7sV-vb-uNJ"/>
+                        <constraint firstAttribute="width" constant="341" id="B5z-Df-NmX"/>
+                        <constraint firstAttribute="bottom" secondItem="hKr-WS-RIy" secondAttribute="bottom" id="KgW-xs-N1u"/>
+                        <constraint firstItem="hKr-WS-RIy" firstAttribute="top" secondItem="8NC-pc-g6M" secondAttribute="top" id="mtn-Yz-PID"/>
+                        <constraint firstItem="SoI-Ol-raq" firstAttribute="centerX" secondItem="8NC-pc-g6M" secondAttribute="centerX" id="oR8-k1-Mfe"/>
+                        <constraint firstAttribute="trailing" secondItem="hKr-WS-RIy" secondAttribute="trailing" id="sz2-t8-VGK"/>
+                        <constraint firstAttribute="height" constant="220" id="ta0-cq-F3x"/>
+                        <constraint firstItem="SoI-Ol-raq" firstAttribute="centerY" secondItem="8NC-pc-g6M" secondAttribute="centerY" id="wcA-WD-UED"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.40000000000000002" green="0.85490196080000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Q52-ZE-HFh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="9vS-NE-PvQ"/>
+                <constraint firstItem="C38-iF-dFC" firstAttribute="top" secondItem="fTM-B5-8hi" secondAttribute="bottom" constant="8" id="BSj-2X-Z6M"/>
+                <constraint firstItem="C38-iF-dFC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DLG-eu-XJf"/>
+                <constraint firstItem="8NC-pc-g6M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NUi-10-fe8"/>
+                <constraint firstItem="8NC-pc-g6M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OXt-RX-Unh"/>
+                <constraint firstItem="fTM-B5-8hi" firstAttribute="top" secondItem="Q52-ZE-HFh" secondAttribute="bottom" constant="15" id="QeV-qF-nzD"/>
+                <constraint firstItem="Q52-ZE-HFh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TKL-bb-bCf"/>
+                <constraint firstAttribute="trailing" secondItem="fTM-B5-8hi" secondAttribute="trailing" id="Taf-co-xfg"/>
+                <constraint firstItem="8NC-pc-g6M" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZSy-hY-Z9p"/>
+                <constraint firstItem="8NC-pc-g6M" firstAttribute="top" secondItem="C38-iF-dFC" secondAttribute="bottom" constant="8" id="eDt-7l-cko"/>
+                <constraint firstItem="fTM-B5-8hi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sxX-kD-xef"/>
+                <constraint firstItem="SoI-Ol-raq" firstAttribute="top" secondItem="C38-iF-dFC" secondAttribute="bottom" constant="8" id="yPU-Kq-HLS"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="OXt-RX-Unh"/>
+                    <exclude reference="ZSy-hY-Z9p"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="342" y="395"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fondo_tarjeta_medica_salud" width="400" height="257"/>
+        <image name="telefonos_tarjeta_medica" width="400" height="157"/>
+    </resources>
+</document>

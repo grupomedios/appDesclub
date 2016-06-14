@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BranchesViewController" customModule="Desclub" customModuleProvider="target">
+            <connections>
+                <outlet property="discountsTableView" destination="oWX-q4-kdE" id="b78-XV-Ers"/>
+                <outlet property="loadingIndicatorView" destination="hD9-s6-4Zm" id="dLx-mG-qbV"/>
+                <outlet property="spinner" destination="bJU-Gy-Und" id="n3Q-lw-e7J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oWX-q4-kdE">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hD9-s6-4Zm" userLabel="Footer View">
+                    <rect key="frame" x="0.0" y="549" width="600" height="51"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bJU-Gy-Und">
+                            <rect key="frame" x="290" y="16" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bJU-Gy-Und" secondAttribute="bottom" constant="15" id="Thm-bf-A2E"/>
+                        <constraint firstAttribute="centerX" secondItem="bJU-Gy-Und" secondAttribute="centerX" id="ZgI-KJ-mjO"/>
+                        <constraint firstItem="bJU-Gy-Und" firstAttribute="top" secondItem="hD9-s6-4Zm" secondAttribute="top" constant="16" id="hoi-hH-Tmu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oWX-q4-kdE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1P4-wq-Pme"/>
+                <constraint firstItem="hD9-s6-4Zm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LiY-Zm-ias"/>
+                <constraint firstAttribute="bottom" secondItem="hD9-s6-4Zm" secondAttribute="bottom" id="Sfn-le-gga"/>
+                <constraint firstAttribute="trailing" secondItem="oWX-q4-kdE" secondAttribute="trailing" id="YTh-LQ-agv"/>
+                <constraint firstAttribute="bottom" secondItem="oWX-q4-kdE" secondAttribute="bottom" id="YbZ-Kr-xzk"/>
+                <constraint firstItem="oWX-q4-kdE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gzx-ab-HO3"/>
+                <constraint firstAttribute="trailing" secondItem="hD9-s6-4Zm" secondAttribute="trailing" id="hTG-nq-TQ4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
