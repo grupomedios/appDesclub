@@ -39,6 +39,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.map_tab")
+        
 		self.edgesForExtendedLayout = UIRectEdge.None
 		self.navigationController?.setNavigationBarHidden(true, animated: true)
 		

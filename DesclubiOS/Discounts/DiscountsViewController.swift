@@ -62,7 +62,6 @@ class DiscountsViewController: AbstractLocationViewController, UITableViewDelega
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        // GoogleAnalitycUtil.trackScreenName("")
     }
     
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
@@ -72,6 +71,8 @@ class DiscountsViewController: AbstractLocationViewController, UITableViewDelega
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.discounts_list")
         
         setupCurrentView()
     }

@@ -57,6 +57,8 @@ class BranchesViewController: AbstractLocationViewController, UITableViewDelegat
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.branches")
+        
 		setupCurrentView()
 	}
 	

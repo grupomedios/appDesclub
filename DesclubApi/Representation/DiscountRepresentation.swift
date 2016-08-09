@@ -27,6 +27,15 @@ class DiscountRepresentation: Mappable {
 	required init?(_ map: Map){
 		
 	}
+    
+    func branchName() -> String?{
+        if let branch = self.branch {
+            if let name = branch.name {
+                return name
+            }
+        }
+        return nil
+    }
 	
 	func mapping(map: Map) {
 		_id <- map["_id"]

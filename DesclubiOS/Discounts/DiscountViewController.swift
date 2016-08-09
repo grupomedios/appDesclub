@@ -50,6 +50,13 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.discount")
+        
+        if let name = self.discount?.branchName() {
+            let event = "Descuento - " + name
+            GoogleAnalitycUtil.trackEvent("analytics.category.discount", event: event)
+        }
+        
 		setupCurrentView()
 		setDiscountData()
 		
@@ -227,10 +234,14 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
 		useCoupon()
 	}
 	
-	func useCoupon() {
-		
-		
-		if calculateDistance() > 2000 {
+    func useCoupon() {
+        
+        if let name = self.discount?.branchName() {
+            let event = "Cupon - " + name
+            GoogleAnalitycUtil.trackEvent("analytics.category.coupon", event: event)
+        }
+        
+        if calculateDistance() > 2000 {
 			
 			let alertController = UIAlertController(title: "¡Fuera de rango!", message:
     "Debes estar cerca del establecimiento para usar este cupón", preferredStyle: UIAlertControllerStyle.Alert)

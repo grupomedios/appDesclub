@@ -62,6 +62,8 @@ class MainViewController: MembershipBaseUIViewController, UITextFieldDelegate, U
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.home")
+
 		if UserHelper.isLoggedIn() && UserHelper.isSalud(){
 			if categories.count == 8 {
 				let redMedica = FakeCategoryRepresentation(_id: "-1", name: "Red Médica", image: "red_medica", color: UIColor.redColor())
@@ -129,6 +131,11 @@ class MainViewController: MembershipBaseUIViewController, UITextFieldDelegate, U
 		if self.categories.count > indexPath.row {
 			
 			let selectedCategory:FakeCategoryRepresentation = self.categories[indexPath.row]
+            
+            if let name = selectedCategory.name {
+                let event = "Categoria - " + name
+                GoogleAnalitycUtil.trackEvent("analytics.category.category", event: event)
+            }
 			
 			if(selectedCategory._id == "-1"){
 				

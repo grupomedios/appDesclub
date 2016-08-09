@@ -23,7 +23,7 @@ class SaludViewController: UIViewController {
         // Do any additional setup after loading the view.
 		self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
 			target: self,
-			selector: Selector("tick"),
+			selector: #selector(SaludViewController.tick),
 			userInfo: nil,
 			repeats: true)
     }
@@ -31,6 +31,8 @@ class SaludViewController: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.health".localized)
+        
 		let value = UIInterfaceOrientation.Portrait.rawValue
 		UIDevice.currentDevice().setValue(value, forKey: "orientation")
 		

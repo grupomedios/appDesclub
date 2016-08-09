@@ -48,6 +48,8 @@ class RecommendedViewController: UIViewController, UITableViewDelegate, UITableV
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.recommended")
+
 		setupCurrentView()
 		refresh(nil)
 	}

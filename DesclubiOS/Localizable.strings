@@ -6,12 +6,18 @@
   Copyright © 2016 Grupo Medios. All rights reserved.
 */
 
+// Track Screen
 "analytics.screen.health" = "Salud"; // Pantalla de Salud
 "analytics.screen.branches" = "Sucursales"; // Pantalla de Sucursales
 "analytics.screen.discount" = "Detalle de Descuento"; //Al entrar a un descuento
 "analytics.screen.discounts_list" = "Lista de descuentos"; // Al desplegar la lista de descuentos
 "analytics.screen.map" = "Ver en mapa"; // Al presionar Ver en mapa desde un descuento
+"analytics.screen.map_tab" = "Mapa de Descuentos"; //Tab Mapa
 "analytics.screen.card" = "Tarjeta"; // Tab Tarjeta
 "analytics.screen.home" = "Inicio";// Tab Inicio
 "analytics.screen.recommended" = "Recomendados"; // Tab Recomendados
-"analytics.screen.map_tab" = "Mapa de Descuentos"; //Tab Mapa
+
+// Track Events
+"analytics.category.discount" = "Descuento";
+"analytics.category.category" = "Categoria";
+"analytics.category.coupon" = "Usar cupon";

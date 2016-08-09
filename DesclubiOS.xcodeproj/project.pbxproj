@@ -11,6 +11,7 @@
 		735BA7D51D5A5560005BF255 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D41D5A5560005BF255 /* Localizable.strings */; };
 		735BA7D81D5A5C15005BF255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */; };
 		735BA7DA1D5A5C97005BF255 /* GoogleAnalitycUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */; };
+		735BA7DE1D5A8F52005BF255 /* CSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BA7DD1D5A8F52005BF255 /* CSString.swift */; };
 		9833120B1B894D7000195311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833120A1B894D7000195311 /* AppDelegate.swift */; };
 		983312121B894D7000195311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983312111B894D7000195311 /* Images.xcassets */; };
 		983312151B894D7000195311 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 983312131B894D7000195311 /* LaunchScreen.xib */; };
@@ -177,6 +178,7 @@
 		735BA7D61D5A558A005BF255 /* DesclubiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesclubiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalitycUtil.swift; sourceTree = "<group>"; };
+		735BA7DD1D5A8F52005BF255 /* CSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSString.swift; sourceTree = "<group>"; };
 		82C83298F1CFBD3C05308834 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		983312051B894D7000195311 /* Desclub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desclub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983312091B894D7000195311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */,
+				735BA7DD1D5A8F52005BF255 /* CSString.swift */,
 				98EF31721BD6AD2A008CAC2B /* Magic.swift */,
 				987DDCA01BA87B1F00343550 /* UserHelper.swift */,
 				98DAB3471B92A43F00AC05B2 /* AbstractLocationViewController.swift */,
@@ -1110,6 +1113,7 @@
 				9853C4C71BB61ED700114F63 /* PhoneNumberRule.swift in Sources */,
 				983312D21B8ABDD500195311 /* FakeCategoryRepresentation.swift in Sources */,
 				983312481B8A531900195311 /* RecommendedViewController.swift in Sources */,
+				735BA7DE1D5A8F52005BF255 /* CSString.swift in Sources */,
 				98DBE25E1BB5C2710095E3ED /* Stream.swift in Sources */,
 				98A11D541B9F726D008E914B /* MembershipAccessViewController.swift in Sources */,
 				983312891B8A56F800195311 /* SwiftSpinner.swift in Sources */,

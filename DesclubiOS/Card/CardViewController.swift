@@ -42,6 +42,8 @@ class CardViewController: MembershipBaseUIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.card")
+
 		//important
 		self.sourveView = membershipAccess
 		

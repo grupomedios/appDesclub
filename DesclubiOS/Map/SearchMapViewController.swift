@@ -54,6 +54,8 @@ class SearchMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.map")
+        
 		self.edgesForExtendedLayout = UIRectEdge.None
 		self.navigationController?.setNavigationBarHidden(true, animated: true)
 		
