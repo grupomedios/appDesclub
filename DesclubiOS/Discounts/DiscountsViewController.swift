@@ -60,10 +60,9 @@ class DiscountsViewController: AbstractLocationViewController, UITableViewDelega
         }
     }
     override func viewWillAppear(animated: Bool) {
-        let googleAnalytics : GAITracker = GAI.sharedInstance().trackerWithTrackingId("UA-75870907-1")
-        googleAnalytics.set(kGAIScreenName, value: "App Móvil Vista de Descuentos")
-        let builder = GAIDictionaryBuilder.createScreenView()
-        googleAnalytics.send(builder.build() as [NSObject : AnyObject])
+        super.viewWillAppear(animated)
+        
+        // GoogleAnalitycUtil.trackScreenName("")
     }
     
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
