@@ -41,6 +41,7 @@ enum DiscountRouter:URLRequestConvertible {
 	}
 	
 	var URLRequest:NSMutableURLRequest {
+        // 		let URL = NSURL(string: "http://feeds.grupomedios.com:6543")!
 		let URL = NSURL(string: Endpoints.baseURL)!
 		let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
 		mutableURLRequest.HTTPMethod = method.rawValue

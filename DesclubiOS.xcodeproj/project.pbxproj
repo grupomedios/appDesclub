@@ -1269,7 +1269,7 @@
 			baseConfigurationReference = 82C83298F1CFBD3C05308834 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BASE_URL = "http://192.168.43.246:6543";
+				BASE_URL = "http://feeds.grupomedios.com:6543";
 				BUNDLE_ID = com.grupomedios.dclub.debug;
 				CATEGORY_ALIMENTOS = 551ed76a5d713df64eace614;
 				CATEGORY_BELLEZA_SALUD = 551ed7845d713df64eace615;
