@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3FA8E9BCF5A41911B4A703F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24EC1A77294F42EDE24F8C49 /* libPods.a */; };
+		7311D89A1D6F535D009A96AF /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311D8991D6F535D009A96AF /* VoucherViewController.swift */; };
+		7311D89C1D6F5378009A96AF /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7311D89B1D6F5378009A96AF /* VoucherViewController.xib */; };
 		735BA7D51D5A5560005BF255 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D41D5A5560005BF255 /* Localizable.strings */; };
 		735BA7D81D5A5C15005BF255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */; };
 		735BA7DA1D5A5C97005BF255 /* GoogleAnalitycUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */; };
@@ -174,6 +176,8 @@
 /* Begin PBXFileReference section */
 		24EC1A77294F42EDE24F8C49 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E31BECAFB2742251E79F12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7311D8991D6F535D009A96AF /* VoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
+		7311D89B1D6F5378009A96AF /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		735BA7D41D5A5560005BF255 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		735BA7D61D5A558A005BF255 /* DesclubiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesclubiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -795,6 +799,8 @@
 				98DC200E1B98977E00554593 /* DiscountViewController.xib */,
 				98DC20221B98D29000554593 /* CardPopoverViewController.swift */,
 				98DC20231B98D29000554593 /* CardPopoverViewController.xib */,
+				7311D8991D6F535D009A96AF /* VoucherViewController.swift */,
+				7311D89B1D6F5378009A96AF /* VoucherViewController.xib */,
 			);
 			path = Discounts;
 			sourceTree = "<group>";
@@ -937,6 +943,7 @@
 				98DAB3401B92931100AC05B2 /* DiscountsViewController.xib in Resources */,
 				983312121B894D7000195311 /* Images.xcassets in Resources */,
 				98DC20251B98D29000554593 /* CardPopoverViewController.xib in Resources */,
+				7311D89C1D6F5378009A96AF /* VoucherViewController.xib in Resources */,
 				98DC20101B98977E00554593 /* DiscountViewController.xib in Resources */,
 				735BA7D51D5A5560005BF255 /* Localizable.strings in Resources */,
 				98DAB3781B96A72A00AC05B2 /* SubcategoryFilterViewController.xib in Resources */,
@@ -1075,6 +1082,7 @@
 				983312E31B8CF52D00195311 /* DiscountRouter.swift in Sources */,
 				98DBE25A1BB5C2710095E3ED /* Request.swift in Sources */,
 				9833128C1B8A56F800195311 /* NSArray+PureLayout.m in Sources */,
+				7311D89A1D6F535D009A96AF /* VoucherViewController.swift in Sources */,
 				98DBE2561BB5C2710095E3ED /* Error.swift in Sources */,
 				9853C4CB1BB61ED700114F63 /* ValidationError.swift in Sources */,
 				983312861B8A56F800195311 /* ILTranslucentView.swift in Sources */,
@@ -1278,8 +1286,8 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1292,8 +1300,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = Debug;
@@ -1312,8 +1321,8 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1326,8 +1335,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = Release;
@@ -1420,8 +1430,8 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1434,8 +1444,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = QA;
@@ -1509,8 +1520,8 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1523,8 +1534,9 @@
 					"$(inherited)",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = AppStore;

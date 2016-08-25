@@ -38,7 +38,7 @@ class CardPopoverViewController: UIViewController {
 		// Do any additional setup after loading the view.
 		self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
 			target: self,
-			selector: Selector("tick"),
+			selector: #selector(CardPopoverViewController.tick),
 			userInfo: nil,
 			repeats: true)
 	}

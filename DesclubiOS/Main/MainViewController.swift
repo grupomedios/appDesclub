@@ -25,12 +25,12 @@ class MainViewController: MembershipBaseUIViewController, UITextFieldDelegate, U
 		
 		//config textfield
 		
-		tap	= UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+		tap	= UITapGestureRecognizer(target: self, action: #selector(MainViewController.dismissKeyboard))
 
 		
 		//move input if keyboard is shown
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
 		
 		self.searchTextField.delegate = self;
 		
