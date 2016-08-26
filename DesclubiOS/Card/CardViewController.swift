@@ -81,6 +81,13 @@ class CardViewController: MembershipBaseUIViewController {
 		self.showMembershipAccessModal()
 	}
 	
+    @IBAction func showWarranty(sender: UIButton){
+        
+        let storyboard = UIStoryboard(name: "Warranty", bundle: nil)
+        if let vc = storyboard.instantiateInitialViewController() {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
 	
 	@IBAction func logout(sender: UIButton) {
 		

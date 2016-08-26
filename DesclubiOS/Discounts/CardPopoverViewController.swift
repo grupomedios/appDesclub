@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Deprecated
 class CardPopoverViewController: UIViewController {
 
 	@IBOutlet weak var cardView: UIView!

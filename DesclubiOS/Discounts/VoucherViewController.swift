@@ -96,6 +96,10 @@ class VoucherViewController: UIViewController {
     
     @IBAction func voucherError(sender: UIButton) {
         // Show warranty
+        let storyboard = UIStoryboard(name: "Warranty", bundle: nil)
+        if let vc = storyboard.instantiateInitialViewController() {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
     
     @IBAction func close(sender: UIButton) {

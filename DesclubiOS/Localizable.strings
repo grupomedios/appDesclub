@@ -21,3 +21,16 @@
 "analytics.category.discount" = "Descuento";
 "analytics.category.category" = "Categoria";
 "analytics.category.coupon" = "Usar cupon";
+
+// Warranty
+"warranty.email_error" = "No hemos podido enviar su correo. Verifique que posee un cliente de correo instalado e intente nuevamente.";
+"warranty.scan_error" = "No hemos podido registrar tu ticket. Por favor intente nuevamente.";
+
+"contact.email" = "atencionaclientes@desclub.com.mx";
+"contact.subject" = "Solicitud de Garantía de satisfacción";
+"contact.body.format" = "Proyecto: %@\nNombre: %@\nCorreo electrónico: %@\nNúmero de membresía: %@\nVigencia: %@\n";
+
+// Alert
+"title_alert" = "Aviso";
+"cancel_alert" = "Cancelar";
+"accept_alert" = "Aceptar";

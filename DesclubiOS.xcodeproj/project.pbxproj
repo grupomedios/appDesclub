@@ -10,10 +10,25 @@
 		3FA8E9BCF5A41911B4A703F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24EC1A77294F42EDE24F8C49 /* libPods.a */; };
 		7311D89A1D6F535D009A96AF /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311D8991D6F535D009A96AF /* VoucherViewController.swift */; };
 		7311D89C1D6F5378009A96AF /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7311D89B1D6F5378009A96AF /* VoucherViewController.xib */; };
+		7311D8A01D6FA43D009A96AF /* Warranty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7311D89F1D6FA43D009A96AF /* Warranty.storyboard */; };
+		7311D8A21D6FC9F5009A96AF /* WarrantyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311D8A11D6FC9F5009A96AF /* WarrantyHomeViewController.swift */; };
 		735BA7D51D5A5560005BF255 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D41D5A5560005BF255 /* Localizable.strings */; };
 		735BA7D81D5A5C15005BF255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */; };
 		735BA7DA1D5A5C97005BF255 /* GoogleAnalitycUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */; };
 		735BA7DE1D5A8F52005BF255 /* CSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BA7DD1D5A8F52005BF255 /* CSString.swift */; };
+		737BC60D1D70A053000E7069 /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6021D70A053000E7069 /* Apache License.txt */; };
+		737BC60E1D70A053000E7069 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6031D70A053000E7069 /* OpenSans-Bold.ttf */; };
+		737BC60F1D70A053000E7069 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6041D70A053000E7069 /* OpenSans-BoldItalic.ttf */; };
+		737BC6101D70A053000E7069 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6051D70A053000E7069 /* OpenSans-ExtraBold.ttf */; };
+		737BC6111D70A053000E7069 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6061D70A053000E7069 /* OpenSans-ExtraBoldItalic.ttf */; };
+		737BC6121D70A053000E7069 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6071D70A053000E7069 /* OpenSans-Italic.ttf */; };
+		737BC6131D70A053000E7069 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6081D70A053000E7069 /* OpenSans-Light.ttf */; };
+		737BC6141D70A053000E7069 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC6091D70A053000E7069 /* OpenSans-LightItalic.ttf */; };
+		737BC6151D70A053000E7069 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC60A1D70A053000E7069 /* OpenSans-Regular.ttf */; };
+		737BC6161D70A053000E7069 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC60B1D70A053000E7069 /* OpenSans-Semibold.ttf */; };
+		737BC6171D70A053000E7069 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 737BC60C1D70A053000E7069 /* OpenSans-SemiboldItalic.ttf */; };
+		737BC6191D70A344000E7069 /* SMImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737BC6181D70A344000E7069 /* SMImagePicker.swift */; };
+		738F1BF41D70887E0067B780 /* WarrantyStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F1BF31D70887E0067B780 /* WarrantyStepsViewController.swift */; };
 		9833120B1B894D7000195311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9833120A1B894D7000195311 /* AppDelegate.swift */; };
 		983312121B894D7000195311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983312111B894D7000195311 /* Images.xcassets */; };
 		983312151B894D7000195311 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 983312131B894D7000195311 /* LaunchScreen.xib */; };
@@ -178,11 +193,26 @@
 		35E31BECAFB2742251E79F12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7311D8991D6F535D009A96AF /* VoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
 		7311D89B1D6F5378009A96AF /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
+		7311D89F1D6FA43D009A96AF /* Warranty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Warranty.storyboard; sourceTree = "<group>"; };
+		7311D8A11D6FC9F5009A96AF /* WarrantyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyHomeViewController.swift; sourceTree = "<group>"; };
 		735BA7D41D5A5560005BF255 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		735BA7D61D5A558A005BF255 /* DesclubiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesclubiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalitycUtil.swift; sourceTree = "<group>"; };
 		735BA7DD1D5A8F52005BF255 /* CSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSString.swift; sourceTree = "<group>"; };
+		737BC6021D70A053000E7069 /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
+		737BC6031D70A053000E7069 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		737BC6041D70A053000E7069 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		737BC6051D70A053000E7069 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		737BC6061D70A053000E7069 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		737BC6071D70A053000E7069 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		737BC6081D70A053000E7069 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		737BC6091D70A053000E7069 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		737BC60A1D70A053000E7069 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		737BC60B1D70A053000E7069 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		737BC60C1D70A053000E7069 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		737BC6181D70A344000E7069 /* SMImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMImagePicker.swift; sourceTree = "<group>"; };
+		738F1BF31D70887E0067B780 /* WarrantyStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyStepsViewController.swift; sourceTree = "<group>"; };
 		82C83298F1CFBD3C05308834 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		983312051B894D7000195311 /* Desclub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desclub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983312091B894D7000195311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -385,6 +415,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7311D89E1D6FA428009A96AF /* Warranty */ = {
+			isa = PBXGroup;
+			children = (
+				7311D89F1D6FA43D009A96AF /* Warranty.storyboard */,
+				7311D8A11D6FC9F5009A96AF /* WarrantyHomeViewController.swift */,
+				738F1BF31D70887E0067B780 /* WarrantyStepsViewController.swift */,
+			);
+			path = Warranty;
+			sourceTree = "<group>";
+		};
+		737BC5E91D70A022000E7069 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				737BC6011D70A053000E7069 /* Font */,
+			);
+			name = Resource;
+			path = DesclubUtil;
+			sourceTree = "<group>";
+		};
+		737BC6011D70A053000E7069 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				737BC6021D70A053000E7069 /* Apache License.txt */,
+				737BC6031D70A053000E7069 /* OpenSans-Bold.ttf */,
+				737BC6041D70A053000E7069 /* OpenSans-BoldItalic.ttf */,
+				737BC6051D70A053000E7069 /* OpenSans-ExtraBold.ttf */,
+				737BC6061D70A053000E7069 /* OpenSans-ExtraBoldItalic.ttf */,
+				737BC6071D70A053000E7069 /* OpenSans-Italic.ttf */,
+				737BC6081D70A053000E7069 /* OpenSans-Light.ttf */,
+				737BC6091D70A053000E7069 /* OpenSans-LightItalic.ttf */,
+				737BC60A1D70A053000E7069 /* OpenSans-Regular.ttf */,
+				737BC60B1D70A053000E7069 /* OpenSans-Semibold.ttf */,
+				737BC60C1D70A053000E7069 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		983311FC1B894D7000195311 = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +460,7 @@
 				9833129C1B8A573200195311 /* UIKit.framework */,
 				98DC20401B9A009B00554593 /* Fabric.framework */,
 				98DC20411B9A009B00554593 /* Crashlytics.framework */,
+				737BC5E91D70A022000E7069 /* Resource */,
 				983312531B8A56F800195311 /* DesclubUtil */,
 				983312341B894FBC00195311 /* DesclubApi */,
 				983312071B894D7000195311 /* DesclubiOS */,
@@ -416,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				9833120A1B894D7000195311 /* AppDelegate.swift */,
+				7311D89E1D6FA428009A96AF /* Warranty */,
 				98DC20361B99F1F400554593 /* Branches */,
 				9833124A1B8A533600195311 /* Card */,
 				9833122A1B894EDB00195311 /* Common */,
@@ -545,6 +614,7 @@
 		983312531B8A56F800195311 /* DesclubUtil */ = {
 			isa = PBXGroup;
 			children = (
+				737BC6181D70A344000E7069 /* SMImagePicker.swift */,
 				98DC202E1B99E81700554593 /* Cell */,
 				983312541B8A56F800195311 /* Button */,
 				9833125A1B8A56F800195311 /* Color */,
@@ -931,31 +1001,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DC203A1B99F27700554593 /* BranchesViewController.xib in Resources */,
+				737BC6121D70A053000E7069 /* OpenSans-Italic.ttf in Resources */,
+				737BC60D1D70A053000E7069 /* Apache License.txt in Resources */,
 				98DAB3701B969DBD00AC05B2 /* CategoryFilterViewController.xib in Resources */,
 				735BA7D81D5A5C15005BF255 /* GoogleService-Info.plist in Resources */,
 				983312491B8A531900195311 /* RecommendedViewController.xib in Resources */,
 				983312A31B8A9C4C00195311 /* CategoryCollectionViewCell.xib in Resources */,
 				98EF62921BA88A0900F9B220 /* CardViewController.xib in Resources */,
 				98A11D4C1B9DFE27008E914B /* SearchMapViewController.xib in Resources */,
+				737BC6171D70A053000E7069 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				737BC6151D70A053000E7069 /* OpenSans-Regular.ttf in Resources */,
 				987848D71BF2A3E4004D038A /* SaludViewController.xib in Resources */,
 				98DAB3441B929AD900AC05B2 /* DiscountTableViewCell.xib in Resources */,
 				983312151B894D7000195311 /* LaunchScreen.xib in Resources */,
 				98DAB3401B92931100AC05B2 /* DiscountsViewController.xib in Resources */,
 				983312121B894D7000195311 /* Images.xcassets in Resources */,
 				98DC20251B98D29000554593 /* CardPopoverViewController.xib in Resources */,
+				737BC60E1D70A053000E7069 /* OpenSans-Bold.ttf in Resources */,
 				7311D89C1D6F5378009A96AF /* VoucherViewController.xib in Resources */,
 				98DC20101B98977E00554593 /* DiscountViewController.xib in Resources */,
 				735BA7D51D5A5560005BF255 /* Localizable.strings in Resources */,
+				7311D8A01D6FA43D009A96AF /* Warranty.storyboard in Resources */,
+				737BC6141D70A053000E7069 /* OpenSans-LightItalic.ttf in Resources */,
+				737BC6101D70A053000E7069 /* OpenSans-ExtraBold.ttf in Resources */,
 				98DAB3781B96A72A00AC05B2 /* SubcategoryFilterViewController.xib in Resources */,
+				737BC6111D70A053000E7069 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				98DAB36C1B95FCDC00AC05B2 /* ZonesFilterViewController.xib in Resources */,
 				98DC203E1B99F34500554593 /* DiscountBranchTableViewCell.xib in Resources */,
 				98DAB35C1B95476B00AC05B2 /* StatesFilterViewController.xib in Resources */,
+				737BC6131D70A053000E7069 /* OpenSans-Light.ttf in Resources */,
+				737BC6161D70A053000E7069 /* OpenSans-Semibold.ttf in Resources */,
 				98A11D551B9F726D008E914B /* MembershipAccessViewController.xib in Resources */,
 				983312441B8A516B00195311 /* MapViewController.xib in Resources */,
 				98DAB3581B952EF900AC05B2 /* SearchBarHeader.xib in Resources */,
 				9833123F1B8A514400195311 /* MainViewController.xib in Resources */,
 				98DAB3801B97C76C00AC05B2 /* DiscountPopoverViewController.xib in Resources */,
 				98A11D511B9E5C45008E914B /* MembershipOptionsViewController.xib in Resources */,
+				737BC60F1D70A053000E7069 /* OpenSans-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,7 +1156,9 @@
 				983312E81B8D5BB000195311 /* DiscountFacade.swift in Sources */,
 				9853C4C31BB61ED700114F63 /* FullNameRule.swift in Sources */,
 				98DAB36F1B969DBD00AC05B2 /* CategoryFilterViewController.swift in Sources */,
+				7311D8A21D6FC9F5009A96AF /* WarrantyHomeViewController.swift in Sources */,
 				98DAB3661B95FB1900AC05B2 /* ZoneRouter.swift in Sources */,
+				738F1BF41D70887E0067B780 /* WarrantyStepsViewController.swift in Sources */,
 				987DDC971BA7615500343550 /* CorporateMembershipRouter.swift in Sources */,
 				98DAB35E1B95512200AC05B2 /* StateRepresentation.swift in Sources */,
 				98DC20291B990EA700554593 /* ActionButtonItem.swift in Sources */,
@@ -1141,6 +1225,7 @@
 				98DAB3621B95519600AC05B2 /* StateRouter.swift in Sources */,
 				9853C48F1BB617EF00114F63 /* URLTransform.swift in Sources */,
 				98DBE2551BB5C2710095E3ED /* Download.swift in Sources */,
+				737BC6191D70A344000E7069 /* SMImagePicker.swift in Sources */,
 				983312831B8A56F800195311 /* UISegmentedControl+VerticalLayout.swift in Sources */,
 				98DC20351B99E81700554593 /* MGSwipeTableCell.m in Sources */,
 				9853C4881BB617EF00114F63 /* CustomDateFormatTransform.swift in Sources */,
@@ -1300,9 +1385,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
+				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = Debug;
@@ -1335,9 +1420,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
+				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = Release;
@@ -1444,9 +1529,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
+				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = QA;
@@ -1534,9 +1619,9 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
+				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = AppStore;
