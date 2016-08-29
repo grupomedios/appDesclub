@@ -33,6 +33,13 @@ class WarrantyHomeViewController: UIViewController {
         self.btnStart.titleLabel?.font = UIFont(name: "OpenSans-ExtraBold", size: 14.0)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.warranty")
+
+    }
+    
     @IBAction func closeWarranty(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }

@@ -87,15 +87,33 @@ class VoucherViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func voucherUsed(sender: UIButton) {
+        
+        if let name = self.discount.branchName() {
+            let event = "Cupon - " + name
+            GoogleAnalitycUtil.trackEvent("analytics.category.coupon_used", event: event)
+        }
+        
         self.showPopup()
     }
     
     @IBAction func voucherCancel(sender: UIButton) {
+        
+        if let name = self.discount.branchName() {
+            let event = "Cupon - " + name
+            GoogleAnalitycUtil.trackEvent("analytics.category.coupon_not_used", event: event)
+        }
+
         self.closeViewController()
     }
     
     @IBAction func voucherError(sender: UIButton) {
         // Show warranty
+        
+        if let name = self.discount.branchName() {
+            let event = "Cupon - " + name
+            GoogleAnalitycUtil.trackEvent("analytics.category.cupont_not_valid", event: event)
+        }
+        
         let storyboard = UIStoryboard(name: "Warranty", bundle: nil)
         if let vc = storyboard.instantiateInitialViewController() {
             self.presentViewController(vc, animated: true, completion: nil)

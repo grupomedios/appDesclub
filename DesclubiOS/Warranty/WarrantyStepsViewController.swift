@@ -32,6 +32,12 @@ class WarrantyStepsViewController: SMImagePicker, MFMailComposeViewControllerDel
         self.configLayouts()
     }
     
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        GoogleAnalitycUtil.trackScreenName("analytics.screen.request_warranty")
+    }
+    
     func configLayouts() {
         
         self.step1View.layer.cornerRadius = self.step1View.frame.size.width * 0.5
