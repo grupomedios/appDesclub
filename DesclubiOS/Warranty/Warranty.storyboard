@@ -43,7 +43,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-8q-6x9">
                                 <rect key="frame" x="16" y="369" width="288" height="67"/>
-                                <string key="text">Desclub te ofrece una Garantía de Satisfacción que te respalda si el comercio participante no te hace válido el descuento o promoción vigente</string>
+                                <string key="text">Te ofrecemos una Garantía de Satisfacción que te respalda si el comercio participante no te hace válido el descuento o promoción vigente</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
