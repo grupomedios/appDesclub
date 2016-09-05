@@ -1385,9 +1385,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = Debug;
@@ -1420,9 +1420,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = Release;
@@ -1529,9 +1529,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = QA;
@@ -1619,9 +1619,9 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grupomedios.dclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a32b80f3-a18e-4920-8d79-ce72f9794eff";
+				PROVISIONING_PROFILE = "45626a1c-c233-4659-8ae2-319fcaa630ad";
 				SWIFT_OBJC_BRIDGING_HEADER = "DesclubiOS-Bridging-Header.h";
 			};
 			name = AppStore;

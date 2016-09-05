@@ -133,7 +133,7 @@ class WarrantyStepsViewController: SMImagePicker, MFMailComposeViewControllerDel
     
     @IBAction func callSupport(sender: AnyObject) {
         
-        let phoneNumber = 018008272582
+        let phoneNumber = "018008272582"
         
         if let phoneCallURL:NSURL = NSURL(string: "telprompt://\(phoneNumber)") {
             let application:UIApplication = UIApplication.sharedApplication()

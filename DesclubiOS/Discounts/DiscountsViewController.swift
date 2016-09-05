@@ -345,25 +345,24 @@ class DiscountsViewController: AbstractLocationViewController, UITableViewDelega
                 cell.address.sizeToFit()
             }
             
-            var showPromo = true
+            cell.cash.text = "-"
+            cell.card.text = "-"
             
             if let cash = discount.discount?.cash {
                 if !cash.isEmpty{
                     cell.cash.text = "\(cash)%"
-                    showPromo = false
                 }
             }
             
             if let card = discount.discount?.card {
                 if !card.isEmpty{
                     cell.card.text = "\(card)%"
-                    showPromo = false
                 }
             }
             
             cell.percentagesContainer.backgroundColor = currentCategory.color
             
-            if showPromo {
+            if cell.cash.text == "-" || cell.card.text == "-" {
                 cell.cash.hidden = true
                 cell.card.hidden = true
                 cell.promo.hidden = false
