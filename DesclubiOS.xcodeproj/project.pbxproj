@@ -12,6 +12,8 @@
 		7311D89C1D6F5378009A96AF /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7311D89B1D6F5378009A96AF /* VoucherViewController.xib */; };
 		7311D8A01D6FA43D009A96AF /* Warranty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7311D89F1D6FA43D009A96AF /* Warranty.storyboard */; };
 		7311D8A21D6FC9F5009A96AF /* WarrantyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311D8A11D6FC9F5009A96AF /* WarrantyHomeViewController.swift */; };
+		734F82201D99454300949F7A /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734F821F1D99454300949F7A /* Geotification.swift */; };
+		734F82221D995DBC00949F7A /* geofencing.json in Resources */ = {isa = PBXBuildFile; fileRef = 734F82211D995DBC00949F7A /* geofencing.json */; };
 		735BA7D51D5A5560005BF255 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D41D5A5560005BF255 /* Localizable.strings */; };
 		735BA7D81D5A5C15005BF255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */; };
 		735BA7DA1D5A5C97005BF255 /* GoogleAnalitycUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BA7D91D5A5C97005BF255 /* GoogleAnalitycUtil.swift */; };
@@ -195,6 +197,8 @@
 		7311D89B1D6F5378009A96AF /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		7311D89F1D6FA43D009A96AF /* Warranty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Warranty.storyboard; sourceTree = "<group>"; };
 		7311D8A11D6FC9F5009A96AF /* WarrantyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyHomeViewController.swift; sourceTree = "<group>"; };
+		734F821F1D99454300949F7A /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		734F82211D995DBC00949F7A /* geofencing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geofencing.json; sourceTree = "<group>"; };
 		735BA7D41D5A5560005BF255 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		735BA7D61D5A558A005BF255 /* DesclubiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesclubiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		735BA7D71D5A5C15005BF255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -425,6 +429,14 @@
 			path = Warranty;
 			sourceTree = "<group>";
 		};
+		734F821E1D99453700949F7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				734F821F1D99454300949F7A /* Geotification.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		737BC5E91D70A022000E7069 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +495,7 @@
 		983312071B894D7000195311 /* DesclubiOS */ = {
 			isa = PBXGroup;
 			children = (
+				734F821E1D99453700949F7A /* Model */,
 				9833120A1B894D7000195311 /* AppDelegate.swift */,
 				7311D89E1D6FA428009A96AF /* Warranty */,
 				98DC20361B99F1F400554593 /* Branches */,
@@ -492,6 +505,7 @@
 				9833122D1B894F4D00195311 /* Error */,
 				983312111B894D7000195311 /* Images.xcassets */,
 				983312131B894D7000195311 /* LaunchScreen.xib */,
+				734F82211D995DBC00949F7A /* geofencing.json */,
 				9833123B1B8A514400195311 /* Main */,
 				983312401B8A515D00195311 /* Map */,
 				98A11D4D1B9E5BFE008E914B /* Membership */,
@@ -1017,6 +1031,7 @@
 				98DAB3401B92931100AC05B2 /* DiscountsViewController.xib in Resources */,
 				983312121B894D7000195311 /* Images.xcassets in Resources */,
 				98DC20251B98D29000554593 /* CardPopoverViewController.xib in Resources */,
+				734F82221D995DBC00949F7A /* geofencing.json in Resources */,
 				737BC60E1D70A053000E7069 /* OpenSans-Bold.ttf in Resources */,
 				7311D89C1D6F5378009A96AF /* VoucherViewController.xib in Resources */,
 				98DC20101B98977E00554593 /* DiscountViewController.xib in Resources */,
@@ -1159,6 +1174,7 @@
 				7311D8A21D6FC9F5009A96AF /* WarrantyHomeViewController.swift in Sources */,
 				98DAB3661B95FB1900AC05B2 /* ZoneRouter.swift in Sources */,
 				738F1BF41D70887E0067B780 /* WarrantyStepsViewController.swift in Sources */,
+				734F82201D99454300949F7A /* Geotification.swift in Sources */,
 				987DDC971BA7615500343550 /* CorporateMembershipRouter.swift in Sources */,
 				98DAB35E1B95512200AC05B2 /* StateRepresentation.swift in Sources */,
 				98DC20291B990EA700554593 /* ActionButtonItem.swift in Sources */,

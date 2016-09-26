@@ -9,18 +9,18 @@
 import UIKit
 import Fabric
 import Crashlytics
-
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	
+    let locationManager = CLLocationManager()
+    var currentLocation : CLLocation? = nil
+    
 	var globalNavigationController:UINavigationController!
 	
 	var tabBarController:UITabBarController!
-
-
 	
 	/**
 	Builds the tab bar controller
@@ -80,8 +80,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-		// Override point for customization after application launch.
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))
         
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+
+		// Override point for customization after application launch.
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+
         GoogleAnalitycUtil.setupGoogleAnalityc()
 		Fabric.with([Crashlytics.self()])
 
@@ -112,6 +119,107 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+    func handleEventForRegion(region: CLRegion!) {
+        let notificationString = "Descubre los descuentos que tienes en “\(region.identifier)” y sus alrededores con tu membresía Desclub!"
+        
+        if UIApplication.sharedApplication().applicationState != .Active {
+            let notification = UILocalNotification()
+            notification.alertBody = notificationString
+            notification.soundName = "Default"
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        }
+//        else {
+//            let alertController = UIAlertController(title: nil, message:
+//                notificationString, preferredStyle: UIAlertControllerStyle.Alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+//            window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+//            
+//        }
+
+    }
+
+    //MARK:- Geofencing
+    
+    private func regionWithGeotification(geotification: Geotification) -> CLCircularRegion {
+        let region = CLCircularRegion(center: geotification.coordinate, radius: geotification.radius, identifier: geotification.identifier)
+        
+        region.notifyOnEntry = (geotification.eventType == .onEntry)
+        region.notifyOnExit = !region.notifyOnEntry
+        return region
+    }
+    
+    func startMonitoring(geotification: Geotification) {
+        
+        if !CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion.self) {
+            // Show error
+            // Geofencing is not supported on this device!
+            return
+        }
+        
+        if CLLocationManager.authorizationStatus() != .AuthorizedAlways {
+            // Show warning
+            // "Your geotification is saved but will only be activated once you grant Geotify permission to access the device location."
+        }
+        
+        let region = self.regionWithGeotification(geotification)
+        locationManager.startMonitoringForRegion(region)
+        
+    }
+    
+    func stopMonitoring(geotification: Geotification) {
+        
+        for region in locationManager.monitoredRegions {
+            guard let circularRegion = region as? CLCircularRegion else {
+                continue
+            }
+            
+            if circularRegion.identifier == geotification.identifier {
+                locationManager.stopMonitoringForRegion(circularRegion)
+            }
+        }
+    }
+    
+    func stopAllMonitoring() {
+        
+        for region in locationManager.monitoredRegions {
+            guard let circularRegion = region as? CLCircularRegion else {
+                continue
+            }
+            
+            locationManager.stopMonitoringForRegion(circularRegion)
+        }
+    }
 
 }
 
+extension AppDelegate: CLLocationManagerDelegate {
+    
+    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleEventForRegion(region)
+        }
+    }
+    
+//    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+//        if region is CLCircularRegion {
+//            handleEventForRegion(region)
+//        }
+//    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+        
+        locationManager.stopUpdatingLocation()
+        
+        if currentLocation == nil {
+            currentLocation = newLocation
+            
+            self.stopAllMonitoring()
+            
+            let arr = Geotification.loadNearPoints(currentLocation!)
+            for geo in arr {
+                self.startMonitoring(geo)
+            }
+        }
+
+    }
+}

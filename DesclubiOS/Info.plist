@@ -59,6 +59,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Desclub usa tu ubicación para mostrarte los descuentos más cercanos</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Desclub usa tu ubicación para mostrarte los descuentos más cercanos</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-Bold.ttf</string>

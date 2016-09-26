@@ -29,12 +29,13 @@ class AbstractLocationViewController: UIViewController, CLLocationManagerDelegat
 	*/
 	func setUpLocation(){
 		//location
+        
 		locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
 		self.locationManager.delegate = self
 		self.locationManager.pausesLocationUpdatesAutomatically = false
 		
-		if(self.locationManager.respondsToSelector("requestWhenInUseAuthorization")) {
-			locationManager.requestWhenInUseAuthorization()
+		if(self.locationManager.respondsToSelector(#selector(CLLocationManager.requestAlwaysAuthorization))) {
+			locationManager.requestAlwaysAuthorization()
 		}
 		
 		self.locationManager.startUpdatingLocation()
