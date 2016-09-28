@@ -1387,7 +1387,7 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1422,7 +1422,7 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1531,7 +1531,7 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1621,7 +1621,7 @@
 				CATEGORY_MODA_HOGAR = 551ed7db5d713df64eace618;
 				CATEGORY_SERVICIOS = 551ed7ee5d713df64eace619;
 				CATEGORY_TURISMO = 551ed80b5d713df64eace61a;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
