@@ -14,14 +14,19 @@ enum kEventType {
     case onExit
 }
 
+
 class Geotification: AnyObject {
     
+    static let keyNotificationID = "identifier"
+
     var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0.0, 0.0)
     var radius: Double = 100.0
     var identifier: String = ""
     var eventType: kEventType = .onEntry
     
     var distance: CLLocationDistance = 0.0
+    
+    private var dateShowed: NSDate?
 
     var name = ""
     var colonia = ""
@@ -48,11 +53,47 @@ class Geotification: AnyObject {
         
     }
     
+    private func loadDateShowed() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let key = "date_" + self.identifier
+        
+        if let date = userDefaults.objectForKey(key) as? NSDate{
+            self.dateShowed = date
+        }
+    }
+    
+    func setDateShowed(date: NSDate) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let key = "date_" + self.identifier
+
+        userDefaults.setObject(date, forKey: key)
+        userDefaults.synchronize()
+    }
+    
     private func calculateDistance(currentLocation : CLLocation) {
         let discountLocation:CLLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         self.distance = discountLocation.distanceFromLocation(currentLocation)
     }
 
+    class func getGotificationIdentifier(indentifier: String) -> Geotification? {
+        
+        if let index = Int(indentifier) {
+            if let json = Geotification.openJSONFile() {
+                // print("jsonData:\(json)")
+                if let arr = json as? NSArray {
+                    if let obj = arr[index] as? [String : AnyObject] {
+                        let geo = Geotification(obj: obj)
+                        geo.identifier = "\(index)"
+                        return geo
+                    }
+                }
+            }
+        }
+        
+        return nil
+        
+    }
+    
     
     class func loadNearPoints(currentLocation : CLLocation) -> [Geotification] {
         
@@ -66,19 +107,35 @@ class Geotification: AnyObject {
                 for obj in arr {
                     let geo = Geotification(obj: obj as! [String : AnyObject])
                     geo.identifier = "\(index)"
+                    geo.loadDateShowed()
                     geo.calculateDistance(currentLocation)
                     
                     index = index + 1
                     
+                    // Ruler #1
+                    // Show a time for week.
+                    if let dateShowed = geo.dateShowed {
+                        
+                        let dateLimit = dateShowed.dateByAddingTimeInterval(60*60*24*7)
+                        if dateLimit.compare(NSDate()) == NSComparisonResult.OrderedDescending {
+                            continue
+                        }
+                    }
+                    
                     allPoints.append(geo)
+                    
                 }
                 
                 allPoints.sortInPlace { $0.distance > $1.distance }
                 
                 var nearPoint = [Geotification]()
                 
+                //print("Geofencing Points >>>>>>>>>")
+
                 for i in 0..<20 {
-                    nearPoint.append(allPoints[i])
+                    let point = allPoints[i]
+                    //print(point.coordinate)
+                    nearPoint.append(point)
                 }
                 
                 return nearPoint
