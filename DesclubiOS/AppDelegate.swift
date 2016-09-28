@@ -117,6 +117,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+}
+
+extension AppDelegate: CLLocationManagerDelegate {
+    
+    //MARK:- Geofencing
+    
     func handleEventForRegion(region: CLRegion!) {
         
         if let geotification = Geotification.getGotificationIdentifier(region.identifier) {
@@ -137,14 +143,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //                notificationString, preferredStyle: UIAlertControllerStyle.Alert)
             //            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
             //            window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
-            //            
+            //
             //        }
-
+            
         }
-
+        
     }
-
-    //MARK:- Geofencing
     
     private func regionWithGeotification(geotification: Geotification) -> CLCircularRegion {
         let region = CLCircularRegion(center: geotification.coordinate, radius: geotification.radius, identifier: geotification.identifier)
@@ -227,12 +231,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-
+        
     }
-
-}
-
-extension AppDelegate: CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         if region is CLCircularRegion {
@@ -252,14 +252,18 @@ extension AppDelegate: CLLocationManagerDelegate {
         
         if currentLocation == nil {
             currentLocation = newLocation
-            
-            self.stopAllMonitoring()
-            
-            let arr = Geotification.loadNearPoints(currentLocation!)
-            for geo in arr {
-                self.startMonitoring(geo)
-            }
+            self.loadPointGeo()
         }
 
+    }
+    
+    func loadPointGeo() {
+        
+        self.stopAllMonitoring()
+        
+        let arr = Geotification.loadNearPoints(currentLocation!)
+        for geo in arr {
+            self.startMonitoring(geo)
+        }
     }
 }

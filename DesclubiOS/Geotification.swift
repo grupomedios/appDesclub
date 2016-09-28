@@ -20,7 +20,7 @@ class Geotification: AnyObject {
     static let keyNotificationID = "identifier"
 
     var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0.0, 0.0)
-    var radius: Double = 100.0
+    var radius: Double = 200.0
     var identifier: String = ""
     var eventType: kEventType = .onEntry
     
@@ -104,6 +104,9 @@ class Geotification: AnyObject {
             if let arr = json as? NSArray {
                 var index = 0
                 
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                let enableRules = userDefaults.boolForKey(CommonConstants.settingAdminRulesGeo)
+                
                 for obj in arr {
                     let geo = Geotification(obj: obj as! [String : AnyObject])
                     geo.identifier = "\(index)"
@@ -112,13 +115,15 @@ class Geotification: AnyObject {
                     
                     index = index + 1
                     
-                    // Ruler #1
-                    // Show a time for week.
-                    if let dateShowed = geo.dateShowed {
-                        
-                        let dateLimit = dateShowed.dateByAddingTimeInterval(60*60*24*7)
-                        if dateLimit.compare(NSDate()) == NSComparisonResult.OrderedDescending {
-                            continue
+                    if enableRules {
+                        // Ruler #1
+                        // Show a time for week.
+                        if let dateShowed = geo.dateShowed {
+                            
+                            let dateLimit = dateShowed.dateByAddingTimeInterval(60*60*24*7)
+                            if dateLimit.compare(NSDate()) == NSComparisonResult.OrderedDescending {
+                                return [Geotification]()
+                            }
                         }
                     }
                     

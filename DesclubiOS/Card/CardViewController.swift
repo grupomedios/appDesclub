@@ -24,10 +24,10 @@ class CardViewController: MembershipBaseUIViewController {
 	@IBOutlet weak var validThru: UILabel!
 	
 	@IBOutlet weak var logout: UIButton!
-	
 	@IBOutlet weak var versionLabel: UILabel!
 	
-	
+    @IBOutlet weak var adminSettingView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,6 +53,8 @@ class CardViewController: MembershipBaseUIViewController {
 	private func hideAndShowComponents(){
 		print(UserHelper.isLoggedIn())
 		
+        self.adminSettingView.hidden = true
+
 		if UserHelper.isLoggedIn() {
 			anonymousContainerView?.hidden = true
 			
@@ -64,6 +66,11 @@ class CardViewController: MembershipBaseUIViewController {
 			self.cardNumber?.text = UserHelper.getCardNumber()
 			self.email.text = membership.email
 			self.validThru.text = UserHelper.getValidThru()
+            
+            
+            if membership.email == "sergio@geckodelabs.com" {
+                self.adminSettingView.hidden = false
+            }
 			
 		}else{
 			anonymousContainerView?.hidden = false
@@ -76,6 +83,16 @@ class CardViewController: MembershipBaseUIViewController {
 		self.hideAndShowComponents()
 	}
 	
+    @IBAction func adminSwitchRulerGeofencing(sender: UISwitch) {
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        userDefault.setBool(sender.on, forKey: CommonConstants.settingAdminRulesGeo)
+        userDefault.synchronize()
+        
+        if let app = UIApplication.sharedApplication().delegate as? AppDelegate {
+            app.loadPointGeo()
+        }
+    }
 
 	@IBAction func membershipAccess(sender: UIButton) {
 		self.showMembershipAccessModal()

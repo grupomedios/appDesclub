@@ -12,7 +12,9 @@ struct CommonConstants {
 	
 	static let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 	static let readableDateFormat = "yyyy-MM-dd"
-	
+
+    static let settingAdminRulesGeo = "settingAdminRulesGeo"
+
 	/**
 	Get the app version
 	*/

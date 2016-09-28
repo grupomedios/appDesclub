@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="Desclub" customModuleProvider="target">
             <connections>
+                <outlet property="adminSettingView" destination="a2B-em-Lw3" id="GEU-Hu-14Q"/>
                 <outlet property="anonymousContainerView" destination="DpS-SB-7FW" id="OG7-ur-3VI"/>
                 <outlet property="cardNumber" destination="ica-0x-4Yk" id="JtF-N3-KGk"/>
                 <outlet property="commonView" destination="i5M-Pr-FkT" id="0B0-AI-niq"/>
@@ -263,12 +264,41 @@
                                 <constraint firstAttribute="trailing" secondItem="Rzk-j5-aZe" secondAttribute="trailing" id="tX4-iM-zyO"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-em-Lw3">
+                            <rect key="frame" x="0.0" y="511" width="203" height="81"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reglas alertas geolocalizadas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zJ-9d-IV3">
+                                    <rect key="frame" x="8" y="8" width="130" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="3nb-In-HJb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-hN-FWC">
+                                    <rect key="frame" x="146" y="10" width="51" height="31"/>
+                                    <connections>
+                                        <action selector="adminSwitchRulerGeofencing:" destination="-2" eventType="valueChanged" id="eWb-1r-DTd"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="9zJ-9d-IV3" firstAttribute="leading" secondItem="a2B-em-Lw3" secondAttribute="leading" constant="8" id="LDE-R7-EZw"/>
+                                <constraint firstItem="CfG-hN-FWC" firstAttribute="leading" secondItem="9zJ-9d-IV3" secondAttribute="trailing" constant="8" id="Obc-Fe-Uc0"/>
+                                <constraint firstAttribute="trailing" secondItem="CfG-hN-FWC" secondAttribute="trailing" constant="8" id="b8I-SI-YfI"/>
+                                <constraint firstItem="CfG-hN-FWC" firstAttribute="centerY" secondItem="9zJ-9d-IV3" secondAttribute="centerY" id="eai-Gt-w4p"/>
+                                <constraint firstItem="9zJ-9d-IV3" firstAttribute="top" secondItem="a2B-em-Lw3" secondAttribute="top" constant="8" id="hG4-IG-qVM"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="DuC-4g-LOe" firstAttribute="top" secondItem="A6p-6i-S2E" secondAttribute="bottom" constant="18" id="1fn-FL-kqm"/>
                         <constraint firstItem="sOT-Vs-rdz" firstAttribute="centerX" secondItem="CmS-mM-Aqa" secondAttribute="centerX" id="5rF-J7-TGw"/>
                         <constraint firstAttribute="bottom" secondItem="DFC-ya-cdF" secondAttribute="bottom" constant="30" id="8ap-aA-YZw"/>
+                        <constraint firstAttribute="bottom" secondItem="a2B-em-Lw3" secondAttribute="bottom" constant="8" id="CQI-GV-KCD"/>
                         <constraint firstAttribute="trailing" secondItem="DFC-ya-cdF" secondAttribute="trailing" constant="8" id="FIl-D4-9hu"/>
                         <constraint firstAttribute="trailing" secondItem="Q8n-hu-evB" secondAttribute="trailing" id="HGf-c5-Fuk"/>
                         <constraint firstItem="A6p-6i-S2E" firstAttribute="top" secondItem="m1O-5T-NlT" secondAttribute="bottom" constant="20" id="Nux-Yw-n6H"/>
@@ -279,6 +309,8 @@
                         <constraint firstItem="DuC-4g-LOe" firstAttribute="leading" secondItem="CmS-mM-Aqa" secondAttribute="leading" id="cJQ-fA-Jdp"/>
                         <constraint firstItem="sOT-Vs-rdz" firstAttribute="top" secondItem="ts6-Lm-Fwz" secondAttribute="bottom" constant="12" id="cle-bh-S1i"/>
                         <constraint firstAttribute="trailing" secondItem="A6p-6i-S2E" secondAttribute="trailing" id="dzq-qU-M9F"/>
+                        <constraint firstItem="a2B-em-Lw3" firstAttribute="top" secondItem="Rzk-j5-aZe" secondAttribute="bottom" id="jUd-fc-KHb"/>
+                        <constraint firstItem="a2B-em-Lw3" firstAttribute="leading" secondItem="CmS-mM-Aqa" secondAttribute="leading" id="lzD-X6-Ej1"/>
                         <constraint firstItem="m1O-5T-NlT" firstAttribute="leading" secondItem="CmS-mM-Aqa" secondAttribute="leading" id="pIZ-iY-9nd"/>
                         <constraint firstItem="A6p-6i-S2E" firstAttribute="leading" secondItem="CmS-mM-Aqa" secondAttribute="leading" id="qHt-me-4NB"/>
                         <constraint firstAttribute="trailing" secondItem="DuC-4g-LOe" secondAttribute="trailing" id="s12-JL-C6A"/>
