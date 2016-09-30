@@ -131,7 +131,7 @@ class Geotification: AnyObject {
                     
                 }
                 
-                allPoints.sortInPlace { $0.distance > $1.distance }
+                allPoints.sortInPlace { $0.distance < $1.distance }
                 
                 var nearPoint = [Geotification]()
                 

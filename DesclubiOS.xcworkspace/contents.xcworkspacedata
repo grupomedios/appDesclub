@@ -5,6 +5,9 @@
       location = "group:Mexico Desclub (1).gpx">
    </FileRef>
    <FileRef
+      location = "group:Mexico Desclub (2).gpx">
+   </FileRef>
+   <FileRef
       location = "group:DesclubiOS.xcodeproj">
    </FileRef>
    <FileRef
