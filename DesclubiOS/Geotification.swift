@@ -20,7 +20,7 @@ class Geotification: AnyObject {
     static let keyNotificationID = "identifier"
 
     var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0.0, 0.0)
-    var radius: Double = 200.0
+    var radius: Double = 100.0
     var identifier: String = ""
     var eventType: kEventType = .onEntry
     
