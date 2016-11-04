@@ -170,8 +170,6 @@
 		98DC20351B99E81700554593 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DC20331B99E81700554593 /* MGSwipeTableCell.m */; };
 		98DC20391B99F27700554593 /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DC20371B99F27700554593 /* BranchesViewController.swift */; };
 		98DC203A1B99F27700554593 /* BranchesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98DC20381B99F27700554593 /* BranchesViewController.xib */; };
-		98DC203D1B99F34500554593 /* DiscountBranchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DC203B1B99F34500554593 /* DiscountBranchTableViewCell.swift */; };
-		98DC203E1B99F34500554593 /* DiscountBranchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98DC203C1B99F34500554593 /* DiscountBranchTableViewCell.xib */; };
 		98DC20421B9A009B00554593 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DC20401B9A009B00554593 /* Fabric.framework */; };
 		98DC20431B9A009B00554593 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DC20411B9A009B00554593 /* Crashlytics.framework */; };
 		98EF31731BD6AD2A008CAC2B /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EF31721BD6AD2A008CAC2B /* Magic.swift */; };
@@ -372,8 +370,6 @@
 		98DC20331B99E81700554593 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 		98DC20371B99F27700554593 /* BranchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchesViewController.swift; sourceTree = "<group>"; };
 		98DC20381B99F27700554593 /* BranchesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BranchesViewController.xib; sourceTree = "<group>"; };
-		98DC203B1B99F34500554593 /* DiscountBranchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountBranchTableViewCell.swift; sourceTree = "<group>"; };
-		98DC203C1B99F34500554593 /* DiscountBranchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountBranchTableViewCell.xib; sourceTree = "<group>"; };
 		98DC20401B9A009B00554593 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		98DC20411B9A009B00554593 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		98EF31721BD6AD2A008CAC2B /* Magic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
@@ -911,8 +907,6 @@
 		98DC20361B99F1F400554593 /* Branches */ = {
 			isa = PBXGroup;
 			children = (
-				98DC203B1B99F34500554593 /* DiscountBranchTableViewCell.swift */,
-				98DC203C1B99F34500554593 /* DiscountBranchTableViewCell.xib */,
 				98DC20371B99F27700554593 /* BranchesViewController.swift */,
 				98DC20381B99F27700554593 /* BranchesViewController.xib */,
 			);
@@ -1042,7 +1036,6 @@
 				98DAB3781B96A72A00AC05B2 /* SubcategoryFilterViewController.xib in Resources */,
 				737BC6111D70A053000E7069 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				98DAB36C1B95FCDC00AC05B2 /* ZonesFilterViewController.xib in Resources */,
-				98DC203E1B99F34500554593 /* DiscountBranchTableViewCell.xib in Resources */,
 				98DAB35C1B95476B00AC05B2 /* StatesFilterViewController.xib in Resources */,
 				737BC6131D70A053000E7069 /* OpenSans-Light.ttf in Resources */,
 				737BC6161D70A053000E7069 /* OpenSans-Semibold.ttf in Resources */,
@@ -1227,7 +1220,6 @@
 				983312891B8A56F800195311 /* SwiftSpinner.swift in Sources */,
 				98DAB3481B92A43F00AC05B2 /* AbstractLocationViewController.swift in Sources */,
 				9833128A1B8A56F800195311 /* MPGNotification.m in Sources */,
-				98DC203D1B99F34500554593 /* DiscountBranchTableViewCell.swift in Sources */,
 				9833128D1B8A56F800195311 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				9853C4C91BB61ED700114F63 /* RequiredRule.swift in Sources */,
 				98EF62941BA897E000F9B220 /* MembershipBaseUIViewController.swift in Sources */,

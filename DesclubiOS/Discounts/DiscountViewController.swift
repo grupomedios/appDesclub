@@ -25,6 +25,8 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
 	@IBOutlet weak var branchName: UILabel!
 	@IBOutlet weak var branchAddress: UILabel!
 	@IBOutlet weak var restriction: UILabel!
+    @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var btnPhone: UIButton!
 	@IBOutlet weak var discountButton: UIView!
 	
 	var actionButton: ActionButton!
@@ -45,6 +47,8 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setDiscountData()
+
     }
 	
 	override func viewDidAppear(animated: Bool) {
@@ -58,7 +62,7 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
         }
         
 		setupCurrentView()
-		setDiscountData()
+		// setDiscountData()
     
 	}
 	
@@ -94,6 +98,16 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
 			return formatter.stringFromNumber(locationDistance / 1000)! + " km"
 		}
 	}
+    
+    @IBAction func callPhone() {
+        if let discount = self.discount {
+            if let phone = discount.branch?.phone {
+                if let url = NSURL(string: "telprompt://" + phone) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+            }
+        }
+    }
 	
 	private func setDiscountData(){
 		
@@ -104,9 +118,18 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
 				self.branchName.text = discount.branch?.name
 				self.branchAddress.text = branch.getCompleteAddress()
 			}
-			
-            self.cash.text = "-"
-            self.card.text = "-"
+            
+            self.lblPhone.text = ""
+            self.btnPhone.hidden = true
+            self.cash.text = "\(0)%"
+            self.card.text = "\(0)%"
+            
+            if let phone = discount.branch?.phone {
+                if phone.characters.count > 0 {
+                    self.btnPhone.hidden = false
+                    self.lblPhone.text = "Teléfono: " + phone
+                }
+            }
             
             if let cash = discount.cash {
                 if !cash.isEmpty{
@@ -120,23 +143,7 @@ class DiscountViewController: AbstractLocationViewController, UIPopoverPresentat
                 }
             }
             
-            if self.cash.text == "-" || self.card.text == "-" {
-                self.discountText.hidden = true
-				self.cash.hidden = true
-				self.cashText.hidden = true
-				self.card.hidden = true
-				self.cardText.hidden = true
-				self.promo.hidden = false
-				self.promo.text = discount.promo
-				
-			}else{
-				self.discountText.hidden = false
-				self.cash.hidden = false
-				self.cashText.hidden = false
-				self.card.hidden = false
-				self.cardText.hidden = false
-				self.promo.hidden = true
-			}
+            self.promo.text = discount.promo
 			
 			if let validityEnd = discount.brand?.validity_end {
 				let formatter = NSDateFormatter()

@@ -43,8 +43,8 @@ class BranchesViewController: AbstractLocationViewController, UITableViewDelegat
 		self.discountsTableView.tableFooterView = UIView()
 		
 		//register custom cell
-		let nib = UINib(nibName: "DiscountBranchTableViewCell", bundle: nil)
-		discountsTableView.registerNib(nib, forCellReuseIdentifier: "discountBranchTableViewCell")
+        let nib = UINib(nibName: "DiscountTableViewCell", bundle: nil)
+        discountsTableView.registerNib(nib, forCellReuseIdentifier: "discountTableViewCell")
 		
 		setUpLoadingIndicators()
     }
@@ -264,64 +264,16 @@ class BranchesViewController: AbstractLocationViewController, UITableViewDelegat
 	*/
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
-		let cell:DiscountBranchTableViewCell = self.discountsTableView.dequeueReusableCellWithIdentifier("discountBranchTableViewCell") as! DiscountBranchTableViewCell
+		let cell:DiscountTableViewCell = self.discountsTableView.dequeueReusableCellWithIdentifier("discountTableViewCell") as! DiscountTableViewCell
 		
 		if (self.discounts.count > indexPath.row) {
 			
-			let discount:NearByDiscountRepresentation = self.discounts[indexPath.row]
+			let discountNear :NearByDiscountRepresentation = self.discounts[indexPath.row]
 			
-			cell.name.text = discount.discount?.branch?.name
-			cell.distance.text = calculateDistance(discount.dis!)
-			cell.distance.textColor = ColorUtil.desclubBlueColor()
-			cell.distance.sizeToFit()
-			
-			if let branch:BranchRepresentation = discount.discount?.branch {
-				cell.address.text = branch.getCompleteAddress()
-				cell.address.sizeToFit()
-			}
-			
-			var showPromo = true
-			
-			if let cash = discount.discount?.cash {
-				if !cash.isEmpty{
-					cell.cash.text = "\(cash)%"
-					showPromo = false
-				}
-			}
-			
-			if let card = discount.discount?.card {
-				if !card.isEmpty{
-					cell.card.text = "\(card)%"
-					showPromo = false
-				}
-			}
-			
-			cell.percentagesContainer.backgroundColor = ColorUtil.desclubBlueColor()
-			
-			if showPromo {
-				cell.cash.hidden = true
-				cell.card.hidden = true
-				cell.promo.hidden = false
-				
-			}else{
-				cell.cash.hidden = false
-				cell.card.hidden = false
-				cell.promo.hidden = true
-			}
-			
-			//show logo image
-			if discount.discount?.brand?.logoSmall != nil {
-				if let logoPath = discount.discount?.brand?.logoSmall {
-					ImageLoader.sharedLoader.imageForUrl(logoPath, completionHandler:{(image: UIImage?, url: String) in
-						if let loadedImage = image {
-							cell.discountImage.image = loadedImage
-						}else{
-							cell.discountImage.image = UIImage(named: "logo")
-						}
-					})
-				}
-			}
-			
+            if let discount = discountNear.discount {
+                cell.setupWithDiscount(discount, colorCategory: ColorUtil.desclubBlueColor(), distance: discountNear.dis!)
+            }
+            
 		}
 		
 		cell.setNeedsDisplay()

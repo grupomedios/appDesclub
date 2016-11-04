@@ -333,58 +333,10 @@ class DiscountsViewController: AbstractLocationViewController, UITableViewDelega
         
         if (self.discounts.count > indexPath.row) {
             
-            let discount:NearByDiscountRepresentation = self.discounts[indexPath.row]
+            let discountNear :NearByDiscountRepresentation = self.discounts[indexPath.row]
             
-            cell.name.text = discount.discount?.branch?.name
-            cell.distance.text = calculateDistance(discount.dis!)
-            cell.distance.textColor = currentCategory.color
-            cell.distance.sizeToFit()
-            
-            if let branch:BranchRepresentation = discount.discount?.branch {
-                cell.address.text = branch.getCompleteAddress()
-                cell.address.sizeToFit()
-            }
-            
-            cell.cash.text = "-"
-            cell.card.text = "-"
-            
-            if let cash = discount.discount?.cash {
-                if !cash.isEmpty{
-                    cell.cash.text = "\(cash)%"
-                }
-            }
-            
-            if let card = discount.discount?.card {
-                if !card.isEmpty{
-                    cell.card.text = "\(card)%"
-                }
-            }
-            
-            cell.percentagesContainer.backgroundColor = currentCategory.color
-            
-            if cell.cash.text == "-" || cell.card.text == "-" {
-                cell.cash.hidden = true
-                cell.card.hidden = true
-                cell.promo.hidden = false
-                
-            }else{
-                cell.cash.hidden = false
-                cell.card.hidden = false
-                cell.promo.hidden = true
-            }
-            
-            //show logo image
-            if let logoPath = discount.discount?.brand?.logoSmall {
-                
-                magic(logoPath)
-                
-                ImageLoader.sharedLoader.imageForUrl(logoPath, completionHandler:{(image: UIImage?, url: String) in
-                    if let loadedImage = image {
-                        cell.discountImage.image = loadedImage
-                    }else{
-                        cell.discountImage.image = UIImage(named: "logo")
-                    }
-                })
+            if let discount = discountNear.discount {
+                cell.setupWithDiscount(discount, colorCategory: currentCategory.color!, distance: discountNear.dis!)
             }
             
         }

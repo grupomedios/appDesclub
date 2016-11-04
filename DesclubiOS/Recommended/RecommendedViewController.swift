@@ -242,58 +242,7 @@ class RecommendedViewController: UIViewController, UITableViewDelegate, UITableV
 		if (self.discounts.count > indexPath.row) {
 			
 			let discount:DiscountRepresentation = self.discounts[indexPath.row]
-			
-			cell.name.text = discount.branch?.name
-			cell.distance.text = ""
-			cell.distance.sizeToFit()
-			
-			if let branch:BranchRepresentation = discount.branch {
-				cell.address.text = branch.getCompleteAddress()
-				cell.address.sizeToFit()
-			}
-			
-			var showPromo = true
-			
-			if let cash = discount.cash {
-				if !cash.isEmpty{
-					cell.cash.text = "\(cash)%"
-					showPromo = false
-				}
-			}
-			
-			if let card = discount.card {
-				if !card.isEmpty{
-					cell.card.text = "\(card)%"
-					showPromo = false
-				}
-			}
-			
-			cell.percentagesContainer.backgroundColor = ColorUtil.desclubBlueColor()
-			
-			if showPromo {
-				cell.cash.hidden = true
-				cell.card.hidden = true
-				cell.promo.hidden = false
-				
-			}else{
-				cell.cash.hidden = false
-				cell.card.hidden = false
-				cell.promo.hidden = true
-			}
-			
-			//show logo image
-			if discount.brand?.logoSmall != nil {
-				if let logoPath = discount.brand?.logoSmall {
-					ImageLoader.sharedLoader.imageForUrl(logoPath, completionHandler:{(image: UIImage?, url: String) in
-						if let loadedImage = image {
-							cell.discountImage.image = loadedImage
-						}else{
-							cell.discountImage.image = UIImage(named: "logo")
-						}
-					})
-				}
-			}
-			
+			cell.setupWithDiscount(discount)
 		}
 		
 		cell.setNeedsDisplay()

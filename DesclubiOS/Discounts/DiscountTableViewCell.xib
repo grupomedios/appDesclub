@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -41,7 +42,7 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-15-gxt">
-                        <rect key="frame" x="96" y="53" width="260" height="40"/>
+                        <rect key="frame" x="96" y="53" width="243" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="U4w-Je-msk"/>
                         </constraints>
@@ -61,20 +62,20 @@
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MrF-Wd-SNJ">
                         <rect key="frame" x="347" y="32" width="69" height="69"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="10%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-PM-Tnu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="10%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-PM-Tnu">
                                 <rect key="frame" x="4" y="35" width="61" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Promoción" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip0-Oh-PPs">
-                                <rect key="frame" x="2" y="27" width="67" height="16"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="10%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QI-9v-fPb">
+                                <rect key="frame" x="4" y="7" width="61" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="10%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QI-9v-fPb">
-                                <rect key="frame" x="4" y="7" width="61" height="27"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Promoción" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ip0-Oh-PPs">
+                                <rect key="frame" x="0.0" y="20" width="69" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -84,14 +85,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6QI-9v-fPb" secondAttribute="trailing" constant="4" id="00z-Gz-5td"/>
                             <constraint firstItem="6QI-9v-fPb" firstAttribute="leading" secondItem="MrF-Wd-SNJ" secondAttribute="leading" constant="4" id="4Zh-SC-Ojd"/>
+                            <constraint firstItem="ip0-Oh-PPs" firstAttribute="leading" secondItem="MrF-Wd-SNJ" secondAttribute="leading" constant="2" id="9Ur-FZ-Ote"/>
                             <constraint firstItem="2iQ-PM-Tnu" firstAttribute="top" secondItem="6QI-9v-fPb" secondAttribute="bottom" constant="2" id="9hD-QY-epW"/>
                             <constraint firstItem="2iQ-PM-Tnu" firstAttribute="leading" secondItem="MrF-Wd-SNJ" secondAttribute="leading" constant="4" id="DJm-rA-8dI"/>
+                            <constraint firstAttribute="width" secondItem="MrF-Wd-SNJ" secondAttribute="height" multiplier="1:1" id="Kbz-Dc-EZP"/>
                             <constraint firstAttribute="centerY" secondItem="ip0-Oh-PPs" secondAttribute="centerY" id="PFq-cf-GMU"/>
-                            <constraint firstAttribute="centerX" secondItem="ip0-Oh-PPs" secondAttribute="centerX" id="SQv-ht-pbP"/>
                             <constraint firstAttribute="width" constant="69" id="Z2K-qy-3jz"/>
                             <constraint firstAttribute="bottom" secondItem="2iQ-PM-Tnu" secondAttribute="bottom" constant="7" id="aUQ-0n-dS2"/>
                             <constraint firstItem="6QI-9v-fPb" firstAttribute="top" secondItem="MrF-Wd-SNJ" secondAttribute="top" constant="7" id="d1b-LS-eIx"/>
                             <constraint firstAttribute="trailing" secondItem="2iQ-PM-Tnu" secondAttribute="trailing" constant="4" id="qzZ-2i-Eft"/>
+                            <constraint firstAttribute="trailing" secondItem="ip0-Oh-PPs" secondAttribute="trailing" constant="2" id="y9f-gl-quq"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -102,7 +105,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="uiG-15-gxt" secondAttribute="trailing" constant="60" id="8ax-Wz-SHg"/>
+                    <constraint firstItem="MrF-Wd-SNJ" firstAttribute="leading" secondItem="uiG-15-gxt" secondAttribute="trailing" constant="8" id="78i-UQ-mV1"/>
                     <constraint firstItem="s8c-V2-w6G" firstAttribute="leading" secondItem="Ci7-YS-AVU" secondAttribute="trailing" constant="8" id="9uu-9P-H4i"/>
                     <constraint firstItem="uiG-15-gxt" firstAttribute="leading" secondItem="K2O-4z-6Bk" secondAttribute="leading" id="CCr-HJ-mYv"/>
                     <constraint firstAttribute="trailingMargin" secondItem="MrF-Wd-SNJ" secondAttribute="trailing" id="IDl-fR-kyP"/>
@@ -123,11 +126,11 @@
                 <outlet property="cash" destination="6QI-9v-fPb" id="uNH-ZY-Tx4"/>
                 <outlet property="discountImage" destination="Ci7-YS-AVU" id="zal-cw-LoL"/>
                 <outlet property="distance" destination="K2O-4z-6Bk" id="oHB-qJ-ujH"/>
+                <outlet property="lblCenter" destination="ip0-Oh-PPs" id="GKc-h0-o5J"/>
                 <outlet property="name" destination="s8c-V2-w6G" id="hfQ-tG-AWD"/>
                 <outlet property="percentagesContainer" destination="MrF-Wd-SNJ" id="Hqk-03-Agb"/>
-                <outlet property="promo" destination="ip0-Oh-PPs" id="eMF-vx-Phv"/>
             </connections>
-            <point key="canvasLocation" x="700" y="429"/>
+            <point key="canvasLocation" x="658" y="281"/>
         </tableViewCell>
     </objects>
     <resources>
